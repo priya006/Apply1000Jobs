@@ -18,7 +18,7 @@ import time # to sleep
 # fill this in with your job preferences!
 PREFERENCES = {
     "position_title": "Software Engineer",
-    "location": "San Francisco, CA"
+    "location": "Portland, OR"
 }
 
 # helper method to give user time to log into glassdoor
@@ -81,7 +81,7 @@ def aggregate_links(driver):
 
     # parse the page source using beautiful soup
     page_source = driver.page_source
-    soup = BeautifulSoup(page_source)
+    soup = BeautifulSoup(page_source,"html.parser")
 
     # find all hrefs
     allJobLinks = soup.findAll("a", {"class": "jobLink"})
@@ -140,12 +140,12 @@ def getURLs():
 
     allLinks = set()
     page = 1
-    next_url = ''
-    while page < 5: # pick an arbitrary number of pages so this doesn't run infinitely
-        print(f'\nNEXT PAGE #: {page}\n')
+    # next_url = ''
+    # while page < 5: # pick an arbitrary number of pages so this doesn't run infinitely
+    print(f'\nNEXT PAGE #: {page}\n')
 
-        # on the first page, the URL is unique and doesn't have a field for the page number
-        if page == 1:
+    # on the first page, the URL is unique and doesn't have a field for the page number
+    if page == 1:
             # aggregate links on first page
             allLinks.update(aggregate_links(driver))
 
@@ -154,31 +154,31 @@ def getURLs():
             this_page = next_page.get_attribute('href')
 
             # use regex to parse out the page number
-            m = re.search('(?P<url>[^;]*?)(?P<page>.htm\?p=)(?P<pagenum>.)', this_page)
+            # m = re.search('(?P<url>[^;]*?)(?P<page>.htm\?p=)(?P<pagenum>.)', this_page)
 
             # for page 2 onwards, there's a different page structure that we need to convert from
             # (idk why it's like this tho)
             # from: .../jobs-SRCH_IL.0,13_IC1147401_KE14,33.htm?p=2
             # to: .../jobs-SRCH_IL.0,13_IC1147401_KE14,33_IP2.htm
-            page += 1 # increment page count
-            next_url = f"{m.group('url')}_IP{page}.htm" # update url with new page number
+            # page += 1 # increment page count
+            # next_url = f"{m.group('url')}_IP{page}.htm" # update url with new page number
             time.sleep(1) # just to give things time
 
         # same patterns from page 2 onwards
-        if page >=2 :
-            # open page with new URL
-            driver.get(next_url)
-            # collect all the links
-            allLinks.update(aggregate_links(driver))
-            # run regex to get all reusable parts of URL
-            m = re.search('(?P<url>[^;]*?)(?P<pagenum>.)(?P<html>.htm)', next_url)
-            # increment page number for next time
-            page += 1
-            # update URL
-            next_url = f"{m.group('url')}{page}.htm"
+        # if page >=2 :
+        #     # open page with new URL
+        #     driver.get(next_url)
+        #     # collect all the links
+        #     allLinks.update(aggregate_links(driver))
+        #     # run regex to get all reusable parts of URL
+        #     m = re.search('(?P<url>[^;]*?)(?P<pagenum>.)(?P<html>.htm)', next_url)
+        #     # increment page number for next time
+        #     page += 1
+        #     # update URL
+        #     next_url = f"{m.group('url')}{page}.htm"
 
     driver.close()
     return allLinks
 
 # for testing purpose
-# getURLs()
+  #  getURLs()

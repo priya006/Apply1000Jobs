@@ -3,39 +3,41 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import os # to get the resume file
 import time # to sleep
-import get_links
+import getlinks
 
 # sample application links if we don't want to run get_links.py
-URL_l2 = 'https://jobs.lever.co/scratch/2f09a461-f01d-4041-a369-c64c1887ed97/apply?lever-source=Glassdoor'
-URL_l3 = 'https://jobs.lever.co/fleetsmith/eb6648a6-7ad9-4f4a-9918-8b124e10c525/apply?lever-source=Glassdoor'
-URL_l4 = 'https://jobs.lever.co/stellar/0e5a506b-1964-40b4-93ab-31a1ee4e4f90/apply?lever-source=Glassdoor'
-URL_l6 = 'https://jobs.lever.co/verkada/29c66147-82ef-4293-9a6a-aeed7e6d619e/apply?lever-source=Glassdoor'
-URL_l8 = 'https://jobs.lever.co/rimeto/bdca896f-e7e7-4f27-a894-41b47c729c63/apply?lever-source=Glassdoor'
-URL_l9 = 'https://jobs.lever.co/color/20ea56b8-fed2-413c-982d-6173e336d51c/apply?lever-source=Glassdoor'
-URL_g1 = 'https://boards.greenhouse.io/instabase/jobs/4729606002?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic'
+URL_g1 = 'https://boards.greenhouse.io/cdbaby/jobs/4030259003?gh_src=6aa9332a3'
+URL_l2 = 'https://boards.greenhouse.io/memsql/jobs/2060074?gh_src=c2cf63b91'
+# URL_l3 = 'https://jobs.lever.co/fleetsmith/eb6648a6-7ad9-4f4a-9918-8b124e10c525/apply?lever-source=Glassdoor'
+# URL_l4 = 'https://jobs.lever.co/stellar/0e5a506b-1964-40b4-93ab-31a1ee4e4f90/apply?lever-source=Glassdoor'
+# URL_l6 = 'https://jobs.lever.co/verkada/29c66147-82ef-4293-9a6a-aeed7e6d619e/apply?lever-source=Glassdoor'
+# URL_l8 = 'https://jobs.lever.co/rimeto/bdca896f-e7e7-4f27-a894-41b47c729c63/apply?lever-source=Glassdoor'
+# URL_l9 = 'https://jobs.lever.co/color/20ea56b8-fed2-413c-982d-6173e336d51c/apply?lever-source=Glassdoor'
+
 
 
 # there's probably a prettier way to do all of this
 # test URLs so we don't have to call get_links
-URLS = [URL_g1, URL_l4, URL_l3, URL_l6, URL_l8, URL_l9]
+# URLS = [URL_g1, URL_l4, URL_l3, URL_l6, URL_l8, URL_l9]
+URLS = [URL_g1, URL_l2]
 
 # Fill in this dictionary with your personal details!
 JOB_APP = {
-    "first_name": "Foo",
-    "last_name": "Bar",
-    "email": "test@test.com",
-    "phone": "123-456-7890",
-    "org": "Self-Employed",
+    "first_name": "Anandha",
+    "last_name": "Rajendran",
+    "email": "ranandh87@gmail.com",
+    "phone": "503-383-9048",
+    "org": "eBay",
     "resume": "resume.pdf",
     "resume_textfile": "resume_short.txt",
-    "linkedin": "https://www.linkedin.com/",
-    "website": "www.youtube.com",
-    "github": "https://github.com",
-    "twitter": "www.twitter.com",
-    "location": "San Francisco, California, United States",
+    "linkedin": "https://www.linkedin.com/in/ranandha/",
+    "website": "",
+    "github": "",
+    "twitter": "",
+    "location": "Portland, Oregon, United States",
     "grad_month": '06',
-    "grad_year": '2021',
-    "university": "MIT" # if only o.O
+    "grad_year": '2014',
+    "university": "San Jose State University" # if only o.O
 }
 
 # Greenhouse has a different application form structure than Lever, and thus must be parsed differently
@@ -52,9 +54,9 @@ def greenhouse(driver):
         loc = driver.find_element_by_id('job_application_location')
         loc.send_keys(JOB_APP['location'])
         loc.send_keys(Keys.DOWN) # manipulate a dropdown menu
-        loc.send_keys(Keys.DOWN)
+        # loc.send_keys(Keys.DOWN)
         loc.send_keys(Keys.RETURN)
-        time.sleep(2) # give user time to manually input if this fails
+        # time.sleep(2) # give user time to manually input if this fails
 
     except NoSuchElementException:
         pass
@@ -66,7 +68,7 @@ def greenhouse(driver):
     with open(JOB_APP['resume_textfile']) as f:
         lines = f.readlines() # add each line of resume to the text area
         for line in lines:
-            resume_zone.send_keys(line.decode('utf-8'))
+            resume_zone.send_keys(line)
 
     # add linkedin
     try:
@@ -165,12 +167,12 @@ def lever(driver):
 if __name__ == '__main__':
 
     # call get_links to automatically scrape job listings from glassdoor
-    aggregatedURLs = get_links.getURLs()
-    print(f'Job Listings: {aggregatedURLs}')
+    # aggregatedURLs = getlinks.getURLs()
+    print(f'Job Listings: {URLS}')
     print('\n')
 
     driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-    for url in aggregatedURLs:
+    for url in URLS:
         print('\n')
 
         if 'greenhouse' in url:
