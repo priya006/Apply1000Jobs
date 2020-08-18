@@ -25,17 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="493cc2a1-54e7-42aa-9fa9-543795f225d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Apply1000jobs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume_short.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/apply.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_links.py" beforeDir="false" afterPath="$PROJECT_DIR$/getlinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/resume.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getlinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/getlinks.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,50 +131,50 @@
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state x="654" y="398" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1792.997@0.23.1792.997" timestamp="1597556182980" />
-    <state width="1771" height="185" key="GridCell.Tab.0.bottom" timestamp="1597779558690">
+    <state width="1771" height="320" key="GridCell.Tab.0.bottom" timestamp="1597785923656">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.0.bottom/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597771003074" />
     <state width="1771" height="216" key="GridCell.Tab.0.bottom/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1597683839844" />
-    <state width="1771" height="185" key="GridCell.Tab.0.bottom/0.23.1792.997@0.23.1792.997" timestamp="1597779558690" />
-    <state width="1771" height="185" key="GridCell.Tab.0.center" timestamp="1597779558688">
+    <state width="1771" height="320" key="GridCell.Tab.0.bottom/0.23.1792.997@0.23.1792.997" timestamp="1597785923656" />
+    <state width="1771" height="320" key="GridCell.Tab.0.center" timestamp="1597785923655">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.0.center/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597771003074" />
     <state width="1771" height="216" key="GridCell.Tab.0.center/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1597683839843" />
-    <state width="1771" height="185" key="GridCell.Tab.0.center/0.23.1792.997@0.23.1792.997" timestamp="1597779558688" />
-    <state width="1771" height="185" key="GridCell.Tab.0.left" timestamp="1597779558687">
+    <state width="1771" height="320" key="GridCell.Tab.0.center/0.23.1792.997@0.23.1792.997" timestamp="1597785923655" />
+    <state width="1771" height="320" key="GridCell.Tab.0.left" timestamp="1597785923655">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.0.left/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597771003074" />
     <state width="1771" height="216" key="GridCell.Tab.0.left/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1597683839843" />
-    <state width="1771" height="185" key="GridCell.Tab.0.left/0.23.1792.997@0.23.1792.997" timestamp="1597779558687" />
-    <state width="1771" height="185" key="GridCell.Tab.0.right" timestamp="1597779558689">
+    <state width="1771" height="320" key="GridCell.Tab.0.left/0.23.1792.997@0.23.1792.997" timestamp="1597785923655" />
+    <state width="1771" height="320" key="GridCell.Tab.0.right" timestamp="1597785923656">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.0.right/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597771003074" />
     <state width="1771" height="216" key="GridCell.Tab.0.right/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1597683839843" />
-    <state width="1771" height="185" key="GridCell.Tab.0.right/0.23.1792.997@0.23.1792.997" timestamp="1597779558689" />
-    <state width="1771" height="185" key="GridCell.Tab.1.bottom" timestamp="1597779558691">
+    <state width="1771" height="320" key="GridCell.Tab.0.right/0.23.1792.997@0.23.1792.997" timestamp="1597785923656" />
+    <state width="1771" height="185" key="GridCell.Tab.1.bottom" timestamp="1597781637937">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.1.bottom/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597769760406" />
-    <state width="1771" height="185" key="GridCell.Tab.1.bottom/0.23.1792.997@0.23.1792.997" timestamp="1597779558691" />
-    <state width="1771" height="185" key="GridCell.Tab.1.center" timestamp="1597779558690">
+    <state width="1771" height="185" key="GridCell.Tab.1.bottom/0.23.1792.997@0.23.1792.997" timestamp="1597781637937" />
+    <state width="1771" height="185" key="GridCell.Tab.1.center" timestamp="1597781637937">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.1.center/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597769760406" />
-    <state width="1771" height="185" key="GridCell.Tab.1.center/0.23.1792.997@0.23.1792.997" timestamp="1597779558690" />
-    <state width="1771" height="185" key="GridCell.Tab.1.left" timestamp="1597779558690">
+    <state width="1771" height="185" key="GridCell.Tab.1.center/0.23.1792.997@0.23.1792.997" timestamp="1597781637937" />
+    <state width="1771" height="185" key="GridCell.Tab.1.left" timestamp="1597781637937">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.1.left/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597769760406" />
-    <state width="1771" height="185" key="GridCell.Tab.1.left/0.23.1792.997@0.23.1792.997" timestamp="1597779558690" />
-    <state width="1771" height="185" key="GridCell.Tab.1.right" timestamp="1597779558690">
+    <state width="1771" height="185" key="GridCell.Tab.1.left/0.23.1792.997@0.23.1792.997" timestamp="1597781637937" />
+    <state width="1771" height="185" key="GridCell.Tab.1.right" timestamp="1597781637937">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state width="3419" height="349" key="GridCell.Tab.1.right/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597769760406" />
-    <state width="1771" height="185" key="GridCell.Tab.1.right/0.23.1792.997@0.23.1792.997" timestamp="1597779558690" />
+    <state width="1771" height="185" key="GridCell.Tab.1.right/0.23.1792.997@0.23.1792.997" timestamp="1597781637937" />
     <state x="69" y="160" width="1325" height="731" key="SettingsEditor" timestamp="1597776944279">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
@@ -193,11 +185,11 @@
     </state>
     <state x="720" y="-971" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597771851655" />
     <state x="667" y="337" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1792.997@0.23.1792.997" timestamp="1597778421354" />
-    <state x="597" y="154" width="598" height="735" key="find.popup" timestamp="1597779595712">
+    <state x="597" y="154" width="598" height="735" key="find.popup" timestamp="1597782644145">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
     <state x="586" y="-1231" width="1148" height="1045" key="find.popup/-560.-1417.3440.1417/0.23.1792.997@-560.-1417.3440.1417" timestamp="1597769781511" />
-    <state x="597" y="154" width="598" height="735" key="find.popup/0.23.1792.997@0.23.1792.997" timestamp="1597779595712" />
+    <state x="597" y="154" width="598" height="735" key="find.popup/0.23.1792.997@0.23.1792.997" timestamp="1597782644145" />
     <state x="561" y="172" width="670" height="676" key="search.everywhere.popup" timestamp="1597776245746">
       <screen x="0" y="23" width="1792" height="997" />
     </state>
@@ -212,29 +204,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/getlinks.py</url>
-          <line>156</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apply.py</url>
           <line>26</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/getlinks.py</url>
-          <line>143</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/getlinks.py</url>
-          <line>162</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/getlinks.py</url>
-          <line>180</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apply.py</url>
@@ -270,11 +242,6 @@
           <url>file://$PROJECT_DIR$/apply.py</url>
           <line>49</line>
           <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/getlinks.py</url>
-          <line>40</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apply.py</url>

@@ -159,7 +159,7 @@ def lever(driver):
     except NoSuchElementException:
         pass
 
-    # submit resume last so it doesn't auto-fill the rest of the form
+    # submit resume last so i   t doesn't auto-fill the rest of the form
     # since Lever has a clickable file-upload, it's easier to pass it into the webpage
     driver.find_element_by_name('resume').send_keys(os.getcwd()+"/resume.pdf")
     driver.find_element_by_class_name('template-btn-submit').click()
@@ -167,12 +167,12 @@ def lever(driver):
 if __name__ == '__main__':
 
     # call get_links to automatically scrape job listings from glassdoor
-    # aggregatedURLs = getlinks.getURLs()
-    print(f'Job Listings: {URLS}')
+    aggregatedURLs = getlinks.getURLs()
+    print(f'Job Listings: {aggregatedURLs}')
     print('\n')
 
     driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-    for url in URLS:
+    for url in aggregatedURLs:
         print('\n')
 
         if 'greenhouse' in url:
