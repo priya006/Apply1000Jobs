@@ -52,7 +52,7 @@ def greenhouse(driver):
     try:
         loc = driver.find_element_by_id('job_application_location')
         loc.send_keys(JOB_APP['location'])
-        #loc.send_keys(Keys.DOWN)  # manipulate a dropdown menu
+        # loc.send_keys(Keys.DOWN)  # manipulate a dropdown menu
         # loc.send_keys(Keys.DOWN)
         loc.send_keys(Keys.RETURN)
         # time.sleep(2) # give user time to manually input if this fails
@@ -99,16 +99,19 @@ def greenhouse(driver):
 
     # where do you live
     try:
-        driver.find_element_by_css_selector("#job_application_answers_attributes_2_text_value").send_keys("Portland,Oregon,USA")
+        driver.find_element_by_css_selector("#job_application_answers_attributes_2_text_value").send_keys(
+            "Portland,Oregon,USA")
     except NoSuchElementException:
         pass
 
     # Age 18
     try:
-     DropDownSelection = driver.find_element_by_css_selector("#s2id_job_application_answers_attributes_5_boolean_value > a")
-     driver.find_element_by_xpath("//*[@id='s2id_job_application_answers_attributes_5_boolean_value']/a/span[2]").click()
-     DropDownSelection.send_keys(Keys.ARROW_DOWN)
-     DropDownSelection.send_keys(Keys.RETURN)
+        DropDownSelection = driver.find_element_by_css_selector(
+            "#s2id_job_application_answers_attributes_5_boolean_value > a")
+        driver.find_element_by_xpath(
+            "//*[@id='s2id_job_application_answers_attributes_5_boolean_value']/a/span[2]").click()
+        DropDownSelection.send_keys(Keys.ARROW_DOWN)
+        DropDownSelection.send_keys(Keys.RETURN)
     except NoSuchElementException:
         pass
 
@@ -118,7 +121,25 @@ def greenhouse(driver):
     except NoSuchElementException:
         pass
 
+    # accommodation
 
+    try:
+        driver.find_element_by_css_selector("#s2id_job_application_answers_attributes_6_boolean_value > a > span.select2-chosen")
+        driver.find_element_by_xpath("//*[@id='s2id_job_application_answers_attributes_6_boolean_value']/a").click()
+        driver.find_element_by_xpath("//*[@id='s2id_job_application_answers_attributes_6_boolean_value']/a").click()
+        driver.find_element_by_xpath('//*[@id="select2List2"]/li[2]/div').click()
+    except NoSuchElementException:
+        pass
+
+        # legal
+    try:
+        driver.find_element_by_css_selector(
+            "#s2id_job_application_answers_attributes_4_boolean_value > a > span.select2-chosen")
+        driver.find_element_by_xpath(
+            "//*[@id='s2id_job_application_answers_attributes_4_boolean_value']/a/span[2]/b").click()
+        driver.find_element_by_xpath("//*[@id='select2List0']/li[2]/div").click()
+    except NoSuchElementException:
+        pass
 
     # add graduation year
     try:
@@ -276,6 +297,7 @@ def defined_urls():
 if __name__ == '__main__':
     # call get_links to automatically scrape job listings from glassdoor
     # comment below line if you think need not collect one page links or 5 page links and apply for only defined Urls
-    #  aggregatedURLs = getlinks.collectURLs()
+    # aggregatedURLs = getlinks.collectURLs()
     # aggregrate_urls()
+    # Testing purpose
     defined_urls()

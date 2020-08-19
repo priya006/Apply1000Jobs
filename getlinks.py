@@ -136,8 +136,8 @@ def aggregate_links(driver):
 
 # 'main' method to iterate through all pages and aggregate URLs
 def collectURLs():
-    # return get_all_the_links()
-    return get_onepage_links()
+     return get_all_the_links()
+#  return get_onepage_links()
 
 
 # for testing purpose
