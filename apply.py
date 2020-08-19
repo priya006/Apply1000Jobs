@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
-import os # to get the resume file
-import time # to sleep
+import os  # to get the resume file
+import time  # to sleep
 import getlinks
 
 # sample application links if we don't want to run get_links.py
@@ -13,7 +13,6 @@ URL_l2 = 'https://boards.greenhouse.io/memsql/jobs/2060074?gh_src=c2cf63b91'
 # URL_l6 = 'https://jobs.lever.co/verkada/29c66147-82ef-4293-9a6a-aeed7e6d619e/apply?lever-source=Glassdoor'
 # URL_l8 = 'https://jobs.lever.co/rimeto/bdca896f-e7e7-4f27-a894-41b47c729c63/apply?lever-source=Glassdoor'
 # URL_l9 = 'https://jobs.lever.co/color/20ea56b8-fed2-413c-982d-6173e336d51c/apply?lever-source=Glassdoor'
-
 
 
 # there's probably a prettier way to do all of this
@@ -37,12 +36,12 @@ JOB_APP = {
     "location": "Portland, Oregon, United States",
     "grad_month": '06',
     "grad_year": '2014',
-    "university": "San Jose State University" # if only o.O
+    "university": "San Jose State University"  # if only o.O
 }
+
 
 # Greenhouse has a different application form structure than Lever, and thus must be parsed differently
 def greenhouse(driver):
-
     # basic info
     driver.find_element_by_id('first_name').send_keys(JOB_APP['first_name'])
     driver.find_element_by_id('last_name').send_keys(JOB_APP['last_name'])
@@ -53,7 +52,7 @@ def greenhouse(driver):
     try:
         loc = driver.find_element_by_id('job_application_location')
         loc.send_keys(JOB_APP['location'])
-        loc.send_keys(Keys.DOWN) # manipulate a dropdown menu
+        loc.send_keys(Keys.DOWN)  # manipulate a dropdown menu
         # loc.send_keys(Keys.DOWN)
         loc.send_keys(Keys.RETURN)
         # time.sleep(2) # give user time to manually input if this fails
@@ -66,7 +65,7 @@ def greenhouse(driver):
     resume_zone = driver.find_element_by_id('resume_text')
     resume_zone.click()
     with open(JOB_APP['resume_textfile']) as f:
-        lines = f.readlines() # add each line of resume to the text area
+        lines = f.readlines()  # add each line of resume to the text area
         for line in lines:
             resume_zone.send_keys(line)
 
@@ -117,6 +116,7 @@ def greenhouse(driver):
 
     driver.find_element_by_id("submit_app").click()
 
+
 # Handle a Lever form
 def lever(driver):
     # navigate to the application page
@@ -134,7 +134,7 @@ def lever(driver):
     # socials
     driver.find_element_by_name('urls[LinkedIn]').send_keys(JOB_APP['linkedin'])
     driver.find_element_by_name('urls[Twitter]').send_keys(JOB_APP['twitter'])
-    try: # try both versions
+    try:  # try both versions
         driver.find_element_by_name('urls[Github]').send_keys(JOB_APP['github'])
     except NoSuchElementException:
         try:
@@ -147,7 +147,7 @@ def lever(driver):
     try:
         driver.find_element_by_class_name('application-university').click()
         search = driver.find_element_by_xpath("//*[@type='search']")
-        search.send_keys(JOB_APP['university']) # find university in dropdown
+        search.send_keys(JOB_APP['university'])  # find university in dropdown
         search.send_keys(Keys.RETURN)
     except NoSuchElementException:
         pass
@@ -161,16 +161,13 @@ def lever(driver):
 
     # submit resume last so i   t doesn't auto-fill the rest of the form
     # since Lever has a clickable file-upload, it's easier to pass it into the webpage
-    driver.find_element_by_name('resume').send_keys(os.getcwd()+"/resume.pdf")
+    driver.find_element_by_name('resume').send_keys(os.getcwd() + "/resume.pdf")
     driver.find_element_by_class_name('template-btn-submit').click()
 
-if __name__ == '__main__':
 
-    # call get_links to automatically scrape job listings from glassdoor
-    aggregatedURLs = getlinks.getURLs()
+def aggregrate_urls():
     print(f'Job Listings: {aggregatedURLs}')
     print('\n')
-
     driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
     for url in aggregatedURLs:
         print('\n')
@@ -197,6 +194,46 @@ if __name__ == '__main__':
             # print(f"NOT A VALID APP LINK FOR {url}")
             continue
 
-        time.sleep(1) # can lengthen this as necessary (for captcha, for example)
-
+        time.sleep(1)  # can lengthen this as necessary (for captcha, for example)
     driver.close()
+
+def defined_urls():
+        print(f'Job Listings: {URLS}')
+        print('\n')
+        driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
+        for url in URLS:
+            print('\n')
+
+            if 'greenhouse' in url:
+                driver.get(url)
+                try:
+                    greenhouse(driver)
+                    print(f'SUCCESS FOR: {url}')
+                except Exception:
+                    # print(f"FAILED FOR {url}")
+                    continue
+
+            elif 'lever' in url:
+                driver.get(url)
+                try:
+                    lever(driver)
+                    print(f'SUCCESS FOR: {url}')
+                except Exception:
+                    # print(f"FAILED FOR {url}")
+                    continue
+            # i dont think this else is needed
+            else:
+                # print(f"NOT A VALID APP LINK FOR {url}")
+                continue
+
+            time.sleep(1)  # can lengthen this as necessary (for captcha, for example)
+        driver.close()
+
+
+
+if __name__ == '__main__':
+    # call get_links to automatically scrape job listings from glassdoor
+ #comment below line if you think need not collect one page links or 5 page links and apply for only defined Urls
+ #  aggregatedURLs = getlinks.collectURLs()
+    # aggregrate_urls()
+    defined_urls()
