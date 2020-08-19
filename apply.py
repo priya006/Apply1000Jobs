@@ -18,7 +18,7 @@ URL_l2 = 'https://boards.greenhouse.io/memsql/jobs/2060074?gh_src=c2cf63b91'
 # there's probably a prettier way to do all of this
 # test URLs so we don't have to call get_links
 # URLS = [URL_g1, URL_l4, URL_l3, URL_l6, URL_l8, URL_l9]
-URLS = [URL_g1, URL_l2]
+URLS = [URL_g1]
 
 # Fill in this dictionary with your personal details!
 JOB_APP = {
@@ -52,7 +52,7 @@ def greenhouse(driver):
     try:
         loc = driver.find_element_by_id('job_application_location')
         loc.send_keys(JOB_APP['location'])
-        loc.send_keys(Keys.DOWN)  # manipulate a dropdown menu
+        #loc.send_keys(Keys.DOWN)  # manipulate a dropdown menu
         # loc.send_keys(Keys.DOWN)
         loc.send_keys(Keys.RETURN)
         # time.sleep(2) # give user time to manually input if this fails
@@ -68,6 +68,17 @@ def greenhouse(driver):
         lines = f.readlines()  # add each line of resume to the text area
         for line in lines:
             resume_zone.send_keys(line)
+            time.sleep(2)
+
+            # Upload coverletter as a Text File
+        driver.find_element_by_xpath("//*[@id='main_fields']/div[9]/div/div[3]/a[3]").click()
+        cover_letter_zone = driver.find_element_by_id('cover_letter_text')
+        cover_letter_zone.click()
+        with open(JOB_APP['resume_textfile']) as f:
+            lines = f.readlines()  # add each line of resume to the text area
+            for line in lines:
+                cover_letter_zone.send_keys(line)
+                time.sleep(2)
 
     # add linkedin
     try:
@@ -77,6 +88,28 @@ def greenhouse(driver):
             driver.find_element_by_xpath("//label[contains(.,'Linkedin')]").send_keys(JOB_APP['linkedin'])
         except NoSuchElementException:
             pass
+
+    # #school details
+    # try:
+    #   school = driver.find_element_by_xpath("//*[@id='s2id_education_school_name_0']/a/span[1]").send_keys(JOB_APP['university'])
+    #   school.send_keys(Keys.DOWN)
+    #   school.send_keys(Keys.RETURN)
+    # except NoSuchElementException:
+    #     pass
+
+    # where do you live
+    try:
+        driver.find_element_by_css_selector("#job_application_answers_attributes_2_text_value").send_keys("Portland,Oregon,USA")
+    except NoSuchElementException:
+        pass
+
+    # can you relocate
+    try:
+        driver.find_element_by_xpath("//*[@id='job_application_answers_attributes_3_text_value']").send_keys("Yes")
+    except NoSuchElementException:
+        pass
+
+
 
     # add graduation year
     try:
@@ -197,43 +230,43 @@ def aggregrate_urls():
         time.sleep(1)  # can lengthen this as necessary (for captcha, for example)
     driver.close()
 
+
 def defined_urls():
-        print(f'Job Listings: {URLS}')
+    print(f'Job Listings: {URLS}')
+    print('\n')
+    driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
+    for url in URLS:
         print('\n')
-        driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-        for url in URLS:
-            print('\n')
 
-            if 'greenhouse' in url:
-                driver.get(url)
-                try:
-                    greenhouse(driver)
-                    print(f'SUCCESS FOR: {url}')
-                except Exception:
-                    # print(f"FAILED FOR {url}")
-                    continue
-
-            elif 'lever' in url:
-                driver.get(url)
-                try:
-                    lever(driver)
-                    print(f'SUCCESS FOR: {url}')
-                except Exception:
-                    # print(f"FAILED FOR {url}")
-                    continue
-            # i dont think this else is needed
-            else:
-                # print(f"NOT A VALID APP LINK FOR {url}")
+        if 'greenhouse' in url:
+            driver.get(url)
+            try:
+                greenhouse(driver)
+                print(f'SUCCESS FOR: {url}')
+            except Exception:
+                # print(f"FAILED FOR {url}")
                 continue
 
-            time.sleep(1)  # can lengthen this as necessary (for captcha, for example)
-        driver.close()
+        elif 'lever' in url:
+            driver.get(url)
+            try:
+                lever(driver)
+                print(f'SUCCESS FOR: {url}')
+            except Exception:
+                # print(f"FAILED FOR {url}")
+                continue
+        # i dont think this else is needed
+        else:
+            # print(f"NOT A VALID APP LINK FOR {url}")
+            continue
 
+        time.sleep(1)  # can lengthen this as necessary (for captcha, for example)
+    driver.close()
 
 
 if __name__ == '__main__':
     # call get_links to automatically scrape job listings from glassdoor
- #comment below line if you think need not collect one page links or 5 page links and apply for only defined Urls
- #  aggregatedURLs = getlinks.collectURLs()
+    # comment below line if you think need not collect one page links or 5 page links and apply for only defined Urls
+    #  aggregatedURLs = getlinks.collectURLs()
     # aggregrate_urls()
     defined_urls()

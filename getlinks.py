@@ -136,10 +136,11 @@ def aggregate_links(driver):
 
 # 'main' method to iterate through all pages and aggregate URLs
 def collectURLs():
-   #return get_all_the_links()
-     return get_onepage_links()
+    # return get_all_the_links()
+    return get_onepage_links()
 
-    # for testing purpose
+
+# for testing purpose
 #    getURLs()
 
 
@@ -193,6 +194,7 @@ def get_all_the_links():
     driver.close()
     return allLinks
 
+
 def get_onepage_links():
     driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
     success = login(driver)
@@ -204,41 +206,41 @@ def get_onepage_links():
         driver.close()
     onepageLinks = set()
     page = 1
-   # next_url = ''
-#while page == 1:  # pick an arbitrary number of pages so this doesn't run infinitely
+    # next_url = ''
+    # while page == 1:  # pick an arbitrary number of pages so this doesn't run infinitely
     print(f'\nNEXT PAGE #: {page}\n')
 
-        # on the first page, the URL is unique and doesn't have a field for the page number
+    # on the first page, the URL is unique and doesn't have a field for the page number
     if page == 1:
-            # aggregate links on first page
-            onepageLinks.update(aggregate_links(driver))
+        # aggregate links on first page
+        onepageLinks.update(aggregate_links(driver))
 
-            # find next page button and click it
-            next_page = driver.find_element_by_xpath("//*[@id='FooterPageNav']/div/ul/li[3]/a")
-            this_page = next_page.get_attribute('href')
+        # find next page button and click it
+        next_page = driver.find_element_by_xpath("//*[@id='FooterPageNav']/div/ul/li[3]/a")
+        this_page = next_page.get_attribute('href')
 
-            # use regex to parse out the page number
-           # m = re.search('(?P<url>[^;]*?)(?P<page>.htm\?p=)(?P<pagenum>.)', this_page)
+        # use regex to parse out the page number
+    # m = re.search('(?P<url>[^;]*?)(?P<page>.htm\?p=)(?P<pagenum>.)', this_page)
 
-            # for page 2 onwards, there's a different page structure that we need to convert from
-            # (idk why it's like this tho)
-            # from: .../jobs-SRCH_IL.0,13_IC1147401_KE14,33.htm?p=2
-            # to: .../jobs-SRCH_IL.0,13_IC1147401_KE14,33_IP2.htm
-           # page += 1  # increment page count
-           # next_url = f"{m.group('url')}_IP{page}.htm"  # update url with new page number
-           # time.sleep(1)  # just to give things time
+    # for page 2 onwards, there's a different page structure that we need to convert from
+    # (idk why it's like this tho)
+    # from: .../jobs-SRCH_IL.0,13_IC1147401_KE14,33.htm?p=2
+    # to: .../jobs-SRCH_IL.0,13_IC1147401_KE14,33_IP2.htm
+    # page += 1  # increment page count
+    # next_url = f"{m.group('url')}_IP{page}.htm"  # update url with new page number
+    # time.sleep(1)  # just to give things time
 
-        # same patterns from page 2 onwards
-        # if page >= 2:
-        #     # open page with new URL
-        #     driver.get(next_url)
-        #     # collect all the links
-        #     allLinks.update(aggregate_links(driver))
-        #     # run regex to get all reusable parts of URL
-        #     m = re.search('(?P<url>[^;]*?)(?P<pagenum>.)(?P<html>.htm)', next_url)
-        #     # increment page number for next time
-        #     page += 1
-        #     # update URL
-        #     next_url = f"{m.group('url')}{page}.htm"
+    # same patterns from page 2 onwards
+    # if page >= 2:
+    #     # open page with new URL
+    #     driver.get(next_url)
+    #     # collect all the links
+    #     allLinks.update(aggregate_links(driver))
+    #     # run regex to get all reusable parts of URL
+    #     m = re.search('(?P<url>[^;]*?)(?P<pagenum>.)(?P<html>.htm)', next_url)
+    #     # increment page number for next time
+    #     page += 1
+    #     # update URL
+    #     next_url = f"{m.group('url')}{page}.htm"
     driver.close()
     return onepageLinks
