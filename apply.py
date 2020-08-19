@@ -103,6 +103,15 @@ def greenhouse(driver):
     except NoSuchElementException:
         pass
 
+    # Age 18
+    try:
+     DropDownSelection = driver.find_element_by_css_selector("#s2id_job_application_answers_attributes_5_boolean_value > a")
+     driver.find_element_by_xpath("//*[@id='s2id_job_application_answers_attributes_5_boolean_value']/a/span[2]").click()
+     DropDownSelection.send_keys(Keys.ARROW_DOWN)
+     DropDownSelection.send_keys(Keys.RETURN)
+    except NoSuchElementException:
+        pass
+
     # can you relocate
     try:
         driver.find_element_by_xpath("//*[@id='job_application_answers_attributes_3_text_value']").send_keys("Yes")
