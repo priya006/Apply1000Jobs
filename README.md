@@ -44,7 +44,18 @@ Ever sit at your desk for hours, clicking through endless job listings hoping to
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/harshibar/5-python-projects/blob/master/LICENSE) file for details.
 
-Priya's Notes
+## Priya's Notes
+
+What you should have before running `apply.py`
+
+1. pycharm IDE installed with python intrepreter selected as `python 3.7` in run configuration as well as File -> New Project Settings -> Preference for new projects. Select python intrepreter as `python 3.7`
+2. Basic understanding of python language
+3. Python set up. 
+
+# python set up
+* Setting path in for Mac OS
+  `export PATH=${PATH}:/usr/bin/python3`
+
 1. Uncomment `defined_urls()` to run the defined urls
 
 ## How to get the defined urls?
