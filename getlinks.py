@@ -18,7 +18,7 @@ import time  # to sleep
 # fill this in with your job preferences!
 PREFERENCES = {
     "position_title": "Software Engineer",
-    "location": "San Francisco, CA"
+    "location": "Portland, OR"
 }
 
 
@@ -136,7 +136,7 @@ def aggregate_links(driver):
 
 # 'main' method to iterate through all pages and aggregate URLs
 def collectURLs():
-    return get_all_the_links()
+     return get_all_the_links()
  # return get_onepage_links()
 
 
@@ -156,7 +156,7 @@ def get_all_the_links():
     allLinks = set()
     page = 1
     next_url = ''
-    while page < 5:  # pick an arbitrary number of pages so this doesn't run infinitely
+    while page < 10:  # pick an arbitrary number of pages so this doesn't run infinitely
         print(f'\nNEXT PAGE #: {page}\n')
 
         # on the first page, the URL is unique and doesn't have a field for the page number

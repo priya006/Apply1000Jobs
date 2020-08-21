@@ -276,7 +276,7 @@ import getlinks
 
 # there's probably a prettier way to do all of this
 # test URLs so we don't have to call get_links
-URL_g1 = 'https://jobs.lever.co/amobee/f0bca12a-c0ab-4d44-b62c-df1e74cc04c0/apply?lever-source=Glassdoor'
+URL_g1 = 'https://boards.greenhouse.io/celonis/jobs/4017268003?gh_src=1c55098d3'
 URLS = [URL_g1]
 # URLS = [URL_g1,URL_l3,	URL_l4,	URL_l5,	URL_l6,	URL_l7,	URL_l8,	URL_l9,	URL_l10,URL_l11,	URL_l12,	URL_l13,	URL_l14,	URL_l15,	URL_l16,	URL_l17,	URL_l18,	URL_l19,	URL_l20,	URL_l21,	URL_l22,	URL_l23,	URL_l24,	URL_l25,	URL_l26,	URL_l27,	URL_l28,	URL_l29,	URL_l30,	URL_l31,	URL_l32,	URL_l33,	URL_l34,	URL_l35,	URL_l36,	URL_l37,	URL_l38,	URL_l39,	URL_l40,	URL_l41,	URL_l42,	URL_l43,	URL_l44,	URL_l45,	URL_l46,	URL_l47,	URL_l48,	URL_l49,	URL_l50,	URL_l51,	URL_l52,	URL_l53,	URL_l54,	URL_l55,	URL_l56,	URL_l57,	URL_l58,	URL_l59,	URL_l60,	URL_l61,	URL_l62,	URL_l63,	URL_l64,	URL_l65,	URL_l66,	URL_l67,	URL_l68,	URL_l69,	URL_l70,	URL_l71,	URL_l72,	URL_l73,	URL_l74,	URL_l75,	URL_l76,	URL_l77,	URL_l78,	URL_l79,	URL_l80,	URL_l81,	URL_l82,	URL_l83,	URL_l84,	URL_l85,	URL_l86,	URL_l87,	URL_l88,	URL_l89,	URL_l90,	URL_l91,	URL_l92,	URL_l93,	URL_l94,	URL_l95,	URL_l96,	URL_l97,	URL_l98,	URL_l99,	URL_l100,	URL_l101,	URL_l102,	URL_l103,	URL_l104,	URL_l105,	URL_l106,	URL_l107,	URL_l108,	URL_l109,	URL_l110,	URL_l111,	URL_l112,	URL_l113,	URL_l114,	URL_l115,	URL_l116,	URL_l117,	URL_l118,	URL_l119,	URL_l120,	URL_l121,	URL_l122,	URL_l123,	URL_l124,	URL_l125,	URL_l126,	URL_l127,	URL_l128,	URL_l129,	URL_l130,	URL_l131,	URL_l132,	URL_l133,	URL_l134,	URL_l135,	URL_l136,	URL_l137,	URL_l138,	URL_l139,	URL_l140,	URL_l141,	URL_l142,	URL_l143,	URL_l144,	URL_l145,	URL_l146,	URL_l147,	URL_l148,	URL_l149,	URL_l150,	URL_l151,	URL_l152,	URL_l153,	URL_l154,	URL_l155,	URL_l156,	URL_l157,	URL_l158,	URL_l159,	URL_l160,	URL_l161,	URL_l162,	URL_l163,	URL_l164,	URL_l165,	URL_l166,	URL_l167,	URL_l168,	URL_l169,	URL_l170,	URL_l171,	URL_l172,	URL_l173,	URL_l174,	URL_l175,	URL_l176,	URL_l177,	URL_l178,	URL_l179,	URL_l180,	URL_l181,	URL_l182,	URL_l183,	URL_l184,	URL_l185,	URL_l186,	URL_l187,	URL_l188,	URL_l189,	URL_l190,	URL_l191,	URL_l192,	URL_l193,	URL_l194,	URL_l195,	URL_l196,	URL_l197,	URL_l198,	URL_l199,	URL_l200,	URL_l201,	URL_l202,	URL_l203,	URL_l204,	URL_l205,	URL_l206,	URL_l207,	URL_l208,	URL_l209,	URL_l210,	URL_l211,	URL_l212,	URL_l213,	URL_l214,	URL_l215,	URL_l216,	URL_l217,	URL_l218,	URL_l219,	URL_l220,	URL_l221,	URL_l222,	URL_l223,	URL_l224,	URL_l225,	URL_l226,	URL_l227,	URL_l228,	URL_l229,	URL_l230,	URL_l231,	URL_l232,	URL_l233,	URL_l234,	URL_l235,	URL_l236,	URL_l237,	URL_l238,	URL_l239,	URL_l240,	URL_l241,	URL_l242,	URL_l243,	URL_l244,	URL_l245,	URL_l246,	URL_l247,	URL_l248,	URL_l249,	URL_l250,	URL_l251,	URL_l252,	URL_l253,	URL_l254,	URL_l255,	URL_l256,	URL_l257,	URL_l258,	URL_l259,	URL_l260]
 
@@ -452,12 +452,13 @@ def greenhouse(driver):
         pass
 
     driver.find_element_by_id("submit_app").click()
+    print(f'I have applied for the greenhouse job go check email for confirmation')
 
 
 # Handle a Lever form
 def lever(driver):
     # navigate to the application page
-    driver.find_element_by_class_name('template-btn-submit').click()
+   # driver.find_element_by_class_name('template-btn-submit').click()
 
     # basic info
     first_name = JOB_APP['first_name']
@@ -478,7 +479,10 @@ def lever(driver):
             driver.find_element_by_name('urls[GitHub]').send_keys(JOB_APP['github'])
         except NoSuchElementException:
             pass
-    driver.find_element_by_name('urls[Portfolio]').send_keys(JOB_APP['website'])
+        try:
+           driver.find_element_by_name('urls[Portfolio]').send_keys(JOB_APP['website'])
+        except NoSuchElementException:
+            pass
 
     # add university
     try:
@@ -498,6 +502,7 @@ def lever(driver):
     except NoSuchElementException:
         pass
 
+
     # add how you found out about the company
     try:
         driver.find_element_by_class_name('application-dropdown').click()
@@ -508,6 +513,8 @@ def lever(driver):
     # submit resume last so i   t doesn't auto-fill the rest of the form
     # since Lever has a clickable file-upload, it's easier to pass it into the webpage
     driver.find_element_by_name('resume').send_keys(os.getcwd() + "/resume.pdf")
+    time.sleep(5)
+    time.sleep(5)
     driver.find_element_by_class_name('template-btn-submit').click()
 
 
@@ -580,7 +587,7 @@ def defined_urls():
 if __name__ == '__main__':
     # call get_links to automatically scrape job listings from glassdoor
     # comment below two lines if you think need not collect one page links or 5 page links and apply for only defined Urls
-    # aggregatedURLs = getlinks.collectURLs()
-    # aggregrate_urls()
+     aggregatedURLs = getlinks.collectURLs()
+     aggregrate_urls()
     # Testing purpose
-    defined_urls()
+   # defined_urls()
