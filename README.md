@@ -43,3 +43,35 @@ Ever sit at your desk for hours, clicking through endless job listings hoping to
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/harshibar/5-python-projects/blob/master/LICENSE) file for details.
+
+Priya's Notes
+1. Uncomment `defined_urls()` to run the defined urls
+
+## How to get the defined urls?
+
+1. Run the script with uncommenting `aggregatedURLs = getlinks.collectURLs()` and `aggregrate_urls()` 
+2.  In `collectURLs()` uncomment `get_all_the_links()` and increase the desired page size
+
+## How to copy paste the URL's from console?
+*Step 1: Delete the balnk lines*
+1. Paste the Url and Excel and delete the Extra lines. By selecting Home > Find and select > go to Special from Excel 
+2. Select Blanks click OK
+3. Delete the blank lines
+
+*How to get the single quotes for the url*
+1. Select the Url column from excel and Format cells > Custom and type `'@'`
+
+```
+URL_l2	=	'https://boards.greenhouse.io/cdbaby/jobs/4030259003?gh_src=6aa9332a3'
+URL_l3	=	'https://jobs.lever.co/u/a399cbcd-e392-4e7e-a1a6-5f880406ab93/apply?lever-source=Glassdoor'
+URL_l4	=	'https://www.natera.com/careers/job-openings?gnk=job&gni=8a7885ac72e8b12a017314be72c01cfa'
+```
+
+* How to Transpose a column to Row?
+1. Copy the column you want to convert as row. 
+2. Select a blank cella and Click paste special and Check `Transpose`
+
+URL_l25	URL_l26	URL_l27	URL_l28	URL_l29	URL_l30	URL_l31	URL_l32	URL_l33	URL_l34	URL_l35	URL_l36	URL_l37	URL_l38	URL_l39	URL_l40
+
+*How to get comma in between every string
+1. Right click Format Cells, Custom and type `@,`
