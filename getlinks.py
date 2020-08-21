@@ -156,7 +156,7 @@ def get_all_the_links():
     allLinks = set()
     page = 1
     next_url = ''
-    while page < 10:  # pick an arbitrary number of pages so this doesn't run infinitely
+    while page < 7:  # pick an arbitrary number of pages so this doesn't run infinitely
         print(f'\nNEXT PAGE #: {page}\n')
 
         # on the first page, the URL is unique and doesn't have a field for the page number

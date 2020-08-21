@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ff840154-f3c3-47b1-946f-5fd9b243ec6b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/apply.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getlinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/getlinks.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="apply" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apply.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.apply" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="360" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598030474316">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state x="360" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1597882037052" />
+    <state x="360" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.997@0.23.1792.997" timestamp="1598030474316" />
+    <state x="427" y="255" width="1318" height="764" key="#xdebugger.evaluate" timestamp="1597968771329">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state x="427" y="255" width="1318" height="764" key="#xdebugger.evaluate/0.23.1792.997@0.23.1792.997" timestamp="1597968771329" />
+    <state width="1771" height="753" key="GridCell.Tab.0.bottom" timestamp="1598017177950">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="753" key="GridCell.Tab.0.bottom/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1598017177950" />
+    <state width="1771" height="686" key="GridCell.Tab.0.bottom/0.23.1792.997@0.23.1792.997" timestamp="1597969161063" />
+    <state width="1771" height="753" key="GridCell.Tab.0.center" timestamp="1598017177949">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="753" key="GridCell.Tab.0.center/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1598017177949" />
+    <state width="1771" height="686" key="GridCell.Tab.0.center/0.23.1792.997@0.23.1792.997" timestamp="1597969161062" />
+    <state width="1771" height="753" key="GridCell.Tab.0.left" timestamp="1598017177949">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="753" key="GridCell.Tab.0.left/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1598017177949" />
+    <state width="1771" height="686" key="GridCell.Tab.0.left/0.23.1792.997@0.23.1792.997" timestamp="1597969161062" />
+    <state width="1771" height="753" key="GridCell.Tab.0.right" timestamp="1598017177950">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="753" key="GridCell.Tab.0.right/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1598017177950" />
+    <state width="1771" height="686" key="GridCell.Tab.0.right/0.23.1792.997@0.23.1792.997" timestamp="1597969161062" />
+    <state width="1771" height="307" key="GridCell.Tab.1.bottom" timestamp="1597968965948">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="307" key="GridCell.Tab.1.bottom/0.23.1792.997@0.23.1792.997" timestamp="1597968965948" />
+    <state width="1771" height="307" key="GridCell.Tab.1.center" timestamp="1597968965948">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="307" key="GridCell.Tab.1.center/0.23.1792.997@0.23.1792.997" timestamp="1597968965948" />
+    <state width="1771" height="307" key="GridCell.Tab.1.left" timestamp="1597968965947">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="307" key="GridCell.Tab.1.left/0.23.1792.997@0.23.1792.997" timestamp="1597968965947" />
+    <state width="1771" height="307" key="GridCell.Tab.1.right" timestamp="1597968965948">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state width="1771" height="307" key="GridCell.Tab.1.right/0.23.1792.997@0.23.1792.997" timestamp="1597968965948" />
+    <state x="397" y="160" key="SettingsEditor" timestamp="1598030972923">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state x="397" y="160" key="SettingsEditor/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1597882063719" />
+    <state x="397" y="160" key="SettingsEditor/0.23.1792.997@0.23.1792.997" timestamp="1598030972923" />
+    <state x="449" y="266" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1597968539744">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state x="449" y="266" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1792.997@0.23.1792.997" timestamp="1597968539744" />
+    <state x="598" y="284" width="596" height="474" key="find.popup" timestamp="1597992573545">
+      <screen x="0" y="23" width="1792" height="997" />
+    </state>
+    <state x="598" y="284" width="596" height="474" key="find.popup/-560.-1417.3440.1417/0.23.1792.997@0.23.1792.997" timestamp="1597992573545" />
+    <state x="598" y="284" width="596" height="474" key="find.popup/0.23.1792.997@0.23.1792.997" timestamp="1597966841583" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>517</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>514</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>515</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>498</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>460</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>473</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>475</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>478</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>488</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>560</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>563</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>333</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apply.py</url>
+          <line>334</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/getlinks.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/getlinks.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/getlinks.py</url>
+          <line>215</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/getlinks.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/getlinks.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/getlinks.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/getlinks.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
